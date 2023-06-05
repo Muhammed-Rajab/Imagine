@@ -1,0 +1,11 @@
+/*
+    DEV NOTES
+    
+    Syntax:
+    ```
+    Date    time.Date
+    Mission string
+    Goals   []string
+    Remarks number
+    ```
+*/
