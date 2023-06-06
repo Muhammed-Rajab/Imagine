@@ -1,11 +1,25 @@
 /*
-    DEV NOTES
-    
+DEV NOTES
+
     Syntax:
     ```
-    Date    time.Date
+    Time    time.Time
     Mission string
     Goals   []string
-    Remarks number
+    Remarks string
     ```
+
+    ✅ ❌
+
 */
+
+```
+Time    :   1686010508
+Mission :   Structuring and Planning
+Goals   :   [
+    Plan the whole MVP routes               [❌]
+    Research on concurrency and Gonum       [❌]
+    Implement the basic project structure   [❌]
+]
+Remarks :   ""
+```
