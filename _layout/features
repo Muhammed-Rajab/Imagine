@@ -1,0 +1,27 @@
+/*
+    Features
+
+    Syntax:
+    ```
+    [? | ""] DESC [✅ | ❌]
+    ```
+
+    ?   -> Release
+    ""  -> MVP
+*/
+
+```
+? Implement routes for multiple images  [❌]
+  Restrict images over 4MB              [❌]
+? Image format validation               [❌]
+? Corrupted file detection              [❌]
+? Corrupted file detection              [❌]
+? Rate limiting                         [❌]
+? Auth                                  [❌]
+? Optimization                          [❌]
+? Optimization                          [❌]
+? Tokens                                [❌]
+? Documentation                         [❌]
+? Swagger docs                          [❌]
+? AI based Image Editing                [❌]
+```
