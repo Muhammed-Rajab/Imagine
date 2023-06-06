@@ -1,3 +1,37 @@
 /*
     Routes
+
+    Syntax:
+
+    Route: string(
+        "[%METHOD%] -> %URL%\n\tlist(%DESC%)"
+    )
+    ```
+        Routes: []Route
+    ```
 */
+
+```
+Routes: [
+    [POST] -> /api/images/transform
+        Queries:
+            ?flip          "horizontal" | "vertical"
+            ?rotate        number
+            ?scale         number
+            ?translate     "XxY"
+            ?resolution    "XxY"
+            ?crop          "XxY,PxQ"
+            ?brightness    number
+            ?contrast      number 
+            ?saturation    number
+
+    [POST] -> /api/images/filters
+        Queries:
+            name    FilterName
+            ?opts   map[string] interface{}
+
+    [GET] -> /api/docs
+        Queries:
+            None
+]
+```
