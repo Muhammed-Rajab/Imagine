@@ -11,6 +11,7 @@
 */
 
 ```
+? Implement MVP                         [❌]
 ? Implement routes for multiple images  [❌]
   Restrict images over 4MB              [❌]
 ? Image format validation               [❌]
