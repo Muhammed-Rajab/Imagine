@@ -106,3 +106,8 @@ func (*ImageUtils) Negative(img *image.Image) *image.NRGBA {
 func (*ImageUtils) Grayscale(img *image.Image) *image.NRGBA {
 	return imaging.Grayscale(*img)
 }
+
+func (*ImageUtils) Sepia(img *image.Image) *image.NRGBA {
+	// Implement sepia here
+	return imaging.Grayscale(*img)
+}
