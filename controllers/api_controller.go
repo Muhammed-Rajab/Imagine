@@ -103,7 +103,18 @@ func (*APIController) ApplyFilter(c *gin.Context) {
 	}
 
 	imageUtils := utils.ImageUtils{}
-	filteredImage, err := imageUtils.ApplyCustomFilter(&imageData, imageUtils.Grayscale)
+
+	var filteredImage []byte
+
+	if filterName == "grayscale" {
+		filteredImage, err = imageUtils.ApplyCustomFilter(&imageData, imageUtils.Grayscale)
+	} else if filterName == "sepia" {
+		filteredImage, err = imageUtils.ApplyCustomFilter(&imageData, imageUtils.Sepia)
+	} else if filterName == "negative" {
+		filteredImage, err = imageUtils.ApplyCustomFilter(&imageData, imageUtils.Negative)
+	} else {
+		err = errors.New("error occured while applying filter")
+	}
 
 	if err != nil {
 		errorUtils.SendJSONError(c, http.StatusInternalServerError, "Error occured while applying filter to the provided image", err)
