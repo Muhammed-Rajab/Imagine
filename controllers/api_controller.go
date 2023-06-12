@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"errors"
+	"fmt"
 	"net/http"
 	"test-app/utils"
 
@@ -77,6 +79,21 @@ func (*APIController) ApplyFilter(c *gin.Context) {
 		return
 	}
 	defer f.Close()
+
+	// Getting query from url
+	filterName := c.Query("name")
+	fmt.Println("Given filter name: ", filterName)
+	if filterName == "" {
+		errorUtils.SendJSONError(c, http.StatusBadRequest, "Please provide a valid filter name. It should be either `grayscale`, `sepia` or `negative`", errors.New(""))
+		return
+	}
+
+	if filterName == "grayscale" || filterName != "sepia" || filterName == "negative" {
+		fmt.Println("Filter found!!")
+	} else {
+		errorUtils.SendJSONError(c, http.StatusBadRequest, "Please provide a valid filter name. It should be either `grayscale`, `sepia` or `negative`", errors.New(""))
+		return
+	}
 
 	// Decode the file to image
 	imageData, err := imaging.Decode(f)
