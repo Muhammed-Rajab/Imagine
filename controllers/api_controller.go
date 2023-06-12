@@ -88,7 +88,7 @@ func (*APIController) ApplyFilter(c *gin.Context) {
 		return
 	}
 
-	if filterName == "grayscale" || filterName != "sepia" || filterName == "negative" {
+	if filterName == "grayscale" || filterName == "sepia" || filterName == "negative" {
 		fmt.Println("Filter found!!")
 	} else {
 		errorUtils.SendJSONError(c, http.StatusBadRequest, "Please provide a valid filter name. It should be either `grayscale`, `sepia` or `negative`", errors.New(""))
