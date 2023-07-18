@@ -21,6 +21,7 @@ type FilterFunc func(img *image.Image) *image.NRGBA
 func (*ImageUtils) TransformImage(img *image.Image, query *TransformImageQuery) ([]byte, error) {
 
 	// Decode config of the image and get the format
+	// For now, just use JPEG
 	format := imaging.JPEG
 
 	// Converting img to imaging.Image to get better features
