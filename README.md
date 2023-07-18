@@ -75,7 +75,7 @@ This will start the server at http://localhost:4000/
 #### 🔥 Transform Image
 
 ```http
-  GET /api/images/transform
+  POST /api/images/transform
 ```
 
 | Query parameter | Type      | Description                                                                                |
@@ -91,7 +91,7 @@ This will start the server at http://localhost:4000/
 #### ✨ Apply filter
 
 ```http
-  GET /api/images/filter
+  POST /api/images/filter
 ```
 
 | Query parameter | Type     | Description                                         |
@@ -107,7 +107,7 @@ Possible filter names: `sepia`, `grayscale`, `negative`
 #### 🖼️ Get image metadata
 
 ```http
-  GET /api/images/meta
+  POST /api/images/meta
 ```
 
 | Form data | Type       | Description                                                                 |
