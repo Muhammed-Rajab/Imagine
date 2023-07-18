@@ -111,5 +111,29 @@ func (*ImageUtils) Grayscale(img *image.Image) *image.NRGBA {
 
 func (*ImageUtils) Sepia(img *image.Image) *image.NRGBA {
 	// Implement sepia here
-	return imaging.Grayscale(*img)
+	// return imaging.Grayscale(*img)
+
+	bounds := (*img).Bounds()
+	width, height := bounds.Max.X, bounds.Max.Y
+
+	// Create a new NRGBA image for the modified image
+	sepiaImg := image.NewNRGBA(bounds)
+
+	// Iterate over each pixel in the original image
+	for y := 0; y < height; y++ {
+		for x := 0; x < width; x++ {
+			originalColor := (*img).At(x, y)
+			rgbaColor := color.RGBAModel.Convert(originalColor).(color.RGBA)
+
+			// Calculate sepia values
+			sepiaR := uint8((float64(rgbaColor.R)*0.393 + float64(rgbaColor.G)*0.769 + float64(rgbaColor.B)*0.189))
+			sepiaG := uint8((float64(rgbaColor.R)*0.349 + float64(rgbaColor.G)*0.686 + float64(rgbaColor.B)*0.168))
+			sepiaB := uint8((float64(rgbaColor.R)*0.272 + float64(rgbaColor.G)*0.534 + float64(rgbaColor.B)*0.131))
+
+			// Set the sepia color to the new image
+			sepiaImg.Set(x, y, color.RGBA{R: sepiaR, G: sepiaG, B: sepiaB, A: rgbaColor.A})
+		}
+	}
+
+	return sepiaImg
 }
