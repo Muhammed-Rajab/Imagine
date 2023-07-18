@@ -11,10 +11,10 @@ _🌄✨ A magical image transformation server ✨🌄_
 ## 📋 Table of Contents
 
 - [Imagine](#imagine)
-  - [Amazing Features](#amazing-features)
-  - [Installation](#installation)
+  - [Amazing Features](#-amazing-features-)
+  - [Installation](#-installation)
   - [API Reference](#api-reference)
-  - [What I Learned from Building This](#what-i-learned-from-building-this)
+  - [What I Learned from Building This](#-what-i-learned-from-building-this)
 
 ## ✨🌟 Amazing Features 🌟✨
 
