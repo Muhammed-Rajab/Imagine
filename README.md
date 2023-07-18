@@ -8,6 +8,14 @@ _🌄✨ A magical image transformation server ✨🌄_
 
 > 🌟💡 **Disclaimer**: Please be aware that this project was created solely for educational purposes. 📚 While I've strived for code quality, I cannot guarantee its compatibility with your specific project. Therefore, I kindly request that you exercise caution when integrating this code into your own work. My main objective was to grasp the fundamentals of image transformation in Golang and expose them through an API endpoint. It may not be the most optimized code I've written, but it definitely fulfills its purpose. 🎯
 
+## 📋 Table of Contents
+
+- [Imagine](#imagine)
+  - [Amazing Features](#amazing-features)
+  - [Installation](#installation)
+  - [API Reference](#api-reference)
+  - [What I Learned from Building This](#what-i-learned-from-building-this)
+
 ## ✨🌟 Amazing Features 🌟✨
 
 **🖼️ Image Magic ✨**
@@ -105,3 +113,11 @@ Possible filter names: `sepia`, `grayscale`, `negative`
 | Form data | Type       | Description                                                                 |
 | :-------- | :--------- | :-------------------------------------------------------------------------- |
 | `image`   | `jpeg/png` | **required**. The image file to which the transformation must be applied to |
+
+## 💡 What I Learned from Building This
+
+✨ The importance of project structure as it scales: Before diving into coding a new project, carefully consider its structure and organization to ensure smooth growth and maintainability.
+
+🚀 The efficiency of following the `MVP` (Minimum Viable Product) approach: When time is limited, building an initial version with essential features can be highly effective. Additional features can be added incrementally later.
+
+🌿 Take a moment to pause, unwind, and admire your accomplishments. You're doing fantastic! Keep up the great work! 🎉
