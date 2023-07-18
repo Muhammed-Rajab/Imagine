@@ -53,6 +53,7 @@ func (*ImageUtils) TransformImage(img *image.Image, query *TransformImageQuery) 
 	var buf bytes.Buffer
 
 	err := imaging.Encode(&buf, imagingImg, format)
+
 	if err != nil {
 		return []byte{}, errors.New("error occured while encoding transformed image, please try again later")
 	}
