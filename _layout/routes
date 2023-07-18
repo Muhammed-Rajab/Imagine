@@ -1,5 +1,5 @@
-/*
-    Routes
+/\*
+Routes
 
     Syntax:
 
@@ -9,11 +9,14 @@
     ```
         Routes: []Route
     ```
-*/
+
+\*/
 
 ```
 Routes: [
     [POST] -> /api/images/transform
+        Form:
+            image: file(jpeg/png)
         Queries:
             ?flip          "horizontal" | "vertical"
             ?rotate        number
@@ -22,15 +25,18 @@ Routes: [
             ?resolution    "XxY"
             ?crop          "XxY,PxQ"
             ?brightness    number
-            ?contrast      number 
+            ?contrast      number
             ?saturation    number
 
     [POST] -> /api/images/filters
+        Form:
+            image: file(jpeg/png)
         Queries:
             name    FilterName
-            ?opts   map[string] interface{}
 
-    [GET] -> /api/docs
+    [GET] -> /api/meta
+        Form:
+            image: file(jpeg/png)
         Queries:
             None
 ]
